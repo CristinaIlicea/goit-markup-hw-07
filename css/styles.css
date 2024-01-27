@@ -77,10 +77,7 @@ img {
     background-color: var(--brand-color-ocean);
     border-radius: 2px;
 }
-.main-navigation {
 
-    visibility: hidden;
-}
 .contacts {
     font-style: normal;
     letter-spacing: 0.02em;
@@ -140,7 +137,6 @@ img {
     align-items: center;
     justify-content: center;
     gap: 40px;
-    visibility: hidden;
 }
 /*hero section styles*/
 .hero-section {
@@ -402,7 +398,6 @@ img {
     flex-shrink: 0;
     margin-left: 0;
     margin-right: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -460,7 +455,6 @@ img {
 }
 .logo-container {
     margin: 0 auto;
-    display: flex;
     align-items: baseline;
 }
 .footnote-box {
@@ -949,10 +943,198 @@ img {
 
 /*media styles*/
 
+/*mobile only styles*/
+@media screen and (max-width: 767px) {
+    .hamburger-menu {
+        visibility: visible;
+        width: 32px;
+        height: 22px;
+        flex-shrink: 0;
+        align-items: center;
+        display: flex;
+        justify-content:flex-end;
+        padding-left: 200px;
+    }
+    .main-navigation {
+        display: inline-flex;
+        flex-direction: column;
+        gap:40px;
+        color: var(--brand-color-navvy-blue);
+        font-family: Roboto;
+        font-size: 36px;
+        font-weight: 700px;
+        line-height: 700;
+        letter-spacing: 0.72px;
+        text-transform: capitalize;
+    }
+    .contacts-container{
+        display: inline-flex;
+        flex-direction: column;
+    }
+    .nav-link{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .nav-link:hover, .nav-link:focus{
+        color: var(--brand-color-ocean);
+    }
+    body{
+        width: fit-content;
+    }
+    .hero-section{
+        width: fit-content;
+    }
+    .hero-container{
+        width: fit-content;
+        display: block;
+
+    }
+    .hero-button{
+        margin-left: 129px;
+        margin-right: 130px;
+        margin-bottom: 112px;
+
+    }
+    .hero-header{
+        width: 320px;
+        height: 80px;
+        justify-content: center;
+        text-align: center;
+        padding-left: 54px;
+        padding-right: 54px;
+        margin-bottom: 72px;
+    }
+    label > .hamburger-menu{
+        width: 32px;
+        height: 22px;
+    }
+    .header-container{
+        width: fit-content;
+        justify-content: flex-start;
+        margin: 0;
+    }
+    .navigation{
+        justify-content: flex-start;
+    }
+    .header-logo{
+        padding-left: 16px;
+    }
+    .section-two-container{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 72px;
+        width: fit-content;
+    }
+    .section-box{
+        width: 396px;
+        height: 96px;
+    }
+    .feature-icons{
+        height: 1px;
+        width: 1px;
+    }
+    .section-three{
+        visibility: hidden;
+        width: 1px;
+        height: 1px;
+    }
+    .team-section{
+        width: fit-content;
+    }
+    .team-list{
+        flex-direction: column;
+        width: fit-content;
+        padding-left: 110px;
+        padding-right: 110px;
+
+    }
+    .list-item{
+        width: 264px;
+    }
+    .customer-icons{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 396px;
+    }
+    .icon-container{
+        width: 190px;
+        width: 88px;
+    }
+   .footer{
+    width: fit-content;
+   }
+   .logo-container > .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+   .footnote-box{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-left: 110px;
+    padding-right: 110px;
+    margin: 0;
+
+   }
+   .social-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 72px;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-bottom: 72px;
+   }
+   .subscribe-container{
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    border: 1;
+   }
+   .subscribe-input-container{
+    height: 136px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+   .subscribe-email-label {
+    width: 398px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+   }
+   .subscribe-paragraph{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+   }
+
+   *, ::after, ::before{
+    box-sizing: content-box;
+   }
+   .social-text{
+    text-align: center;
+   }
+}
+
+
 /*tablet only styles*/
 @media screen and (min-width: 768px) and (max-width: 1158px) {
     .header-container {
-        height: 72px;
+        height: fit-content;
+        width: fit-content;
+        margin: 0 0 0 0;
+    }
+    .header-logo{
+        padding-left: 16px;
     }
     .main-navigation {
         visibility: visible;
@@ -975,55 +1157,68 @@ img {
         display: block;
     }
     .container-two {
-        width: 768px;
-        height: 72px;
         margin: 0 auto;
         padding: 0;
+        height: fit-content;
+        width: fit-content;
     }
+    
     .hero-container {
         height: 463px;
-        width: 768;
+        width: 768px;
     }
     .section-box {
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        margin-bottom: 8px;
-        width: calc(100%-48px)/2;
-        width: 100%;
-        min-width: 264px;
-    }
-    .section-two-container {
-        width: 768px;
-        height: 312px;
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-    }
-    .section-two {
-        padding: 0;
-    }
-    .section-box {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        width: 350px;
         gap: 8px;
-        width: 356px;
+    }
+
+    .section-two {
+        padding: 0;
+    }
+    .section-two-container{
+        width: fit-content;
+        height: fit-content;
+        display: flex;
         flex-wrap: wrap;
+        margin: 0 0 0 0;
+
     }
     .feature-icons {
         visibility: hidden;
+        width: 1px;
+        height: 1px;
     }
     .section-three {
         visibility: hidden;
+        height: 72px;
     }
     .team-section {
-        width: 768px;
         justify-content: center;
         align-items: center;
+        height: 1224px;
     }
     .team-list {
         flex-wrap: wrap;
+        gap: 24px;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+    }
+    img> .team.list{
+        display: block;
+    }
+    .container> .section-five{
+        width: 552px;
+        height: 360px;
+    }
+    .list-item{
+        width: 264px;
+        padding-bottom: 32px;
+        margin-right: 51px;
     }
     .our-team-header {
         margin-left: none;
@@ -1034,10 +1229,13 @@ img {
     .customer-icons {
         flex-wrap: wrap;
         display: flex;
-        width: 552px;
-        height: 360px;
+        width: 570px;
+        height: 248px;
         justify-content: center;
         align-items: center;
+        gap: 24px;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
     }
     .icon-container {
         width: 168px;
@@ -1046,16 +1244,20 @@ img {
     .section-five {
         padding-top: 96px;
         padding-bottom: 96px;
+        display: flex;
     }
     .footer {
-        width: 768px;
         height: 456px;
+    }
+    .footnote-box{
+        margin-right: 0;
     }
     .logo-container {
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 24px;
         padding-left: 108px;
+        display: flex;
     }
     .subscribe-container {
         margin-left: none;
@@ -1080,10 +1282,14 @@ img {
         margin: 0 auto;
         padding: 0;
     }
+    .container-two{
+        height: 224px;
+    }
     .section-box {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        flex-direction: column;
         gap: 8px;
         margin-bottom: 8px;
         width: calc(100%-48px)/3;
@@ -1092,10 +1298,14 @@ img {
     }
     .section-two-container {
         width: 1128px;
+        height: 224px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 24px;
     }
     .section-box {
         display: flex;
-        flex-direction: row;
         align-items: flex-start;
         gap: 8px;
         margin-bottom: 8px;
@@ -1143,6 +1353,9 @@ img {
         flex-direction: column;
         margin-left: 80px;
     }
+    .logo-container{
+        display: flex;
+    }
 }
 
 /*desktop and tablet styles*/
@@ -1161,7 +1374,9 @@ img {
         max-width: 496px;
         justify-content: center;
     }
-
+    .hamburger-menu {
+        visibility: hidden;
+    }
 
 }
 
