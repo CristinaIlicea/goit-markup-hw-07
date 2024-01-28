@@ -97,7 +97,6 @@ img {
 }
 .header {
     border-bottom: 1px solid #e7e9fc;
-    display: flex;
     background: #fff;
     border-bottom: 1px solid --brand-color-cornflower;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
@@ -943,12 +942,19 @@ img {
 
 /*mobile only styles*/
 @media screen and (max-width: 767px) {
+    .header{
+        width: auto;
+        display: flex;
+    }
     .hamburger-menu {
         visibility: visible;
         flex-shrink: 0;
-        display: flex;
-        width: 428px;
+        width: fit-content;
         height: 70px;
+        align-items: center;
+        display: block;
+        position: relative;
+
     }
     .main-navigation {
         display: none;
@@ -961,6 +967,13 @@ img {
     .mobile-menu{
         width: fit-content;
         height: fit-content;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: flex-start;
+        background-color: #fff;
+        box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .mobile-contact{
         font-size: 36px;
@@ -979,10 +992,13 @@ img {
     .hamburger-contacts{
         justify-content: flex-start;
         font-size: 36px;
-        align-items: center;
+        align-items: flex-start;
         flex-shrink: 0;
         max-width: 100%;
-        width: 428px;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        padding-right: 35px;
     }
     .hamburger-button{
         color: var(--brand-color-iris);
@@ -993,8 +1009,7 @@ img {
         justify-content: flex-end;
         align-items: center;
         width: auto;
-        padding-left: 240px;
-        padding-right: 12px;
+        padding-left: 300px;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .trailing-icons{
@@ -1006,13 +1021,12 @@ img {
     }
     .hamburger-menu-icons{
         display: inline-flex;
-        padding-inline-start: 40px;
-        padding-inline-end: 35px;
+        align-items: flex-start;
+        padding-left: 40px;
+        padding-bottom: 40px;
     }
     .hamburger-navigation{
         font-size: 36px;
-        padding-bottom: 140px;
-        padding-top: 20px;
     }
     .button-close-hamburger-menu{
         border: none;
@@ -1020,7 +1034,8 @@ img {
 
     }
     .hamburger-logo{
-        justify-content: flex-start;
+        padding-top: 25px;
+        display: flex;
     }
     .nav-link{
         display: block;
@@ -1035,17 +1050,19 @@ img {
     }
     .hero-section{
         width: fit-content;
+        max-width: 100%;
+        display: flex;
     }
     .hero-container{
         width: fit-content;
-        display: block;
+        display: flex;
 
     }
     .hero-button{
-        margin-left: 129px;
-        margin-right: 130px;
-        margin-bottom: 112px;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 32px;
     }
     .hero-header{
         width: 320px;
@@ -1075,6 +1092,8 @@ img {
         align-items: flex-start;
         gap: 72px;
         width: fit-content;
+        margin: auto;
+        padding: auto;
     }
     .section-box{
         width: 396px;
@@ -1091,15 +1110,22 @@ img {
     }
     .team-section{
         width: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 100%;
     }
     .team-list{
         flex-direction: column;
         width: fit-content;
         padding-left: 110px;
         padding-right: 110px;
-
+        gap: 72px;
     }
-
+    img{
+        display: block;
+        max-width: 100%;
+    }
     .list-item{
         width: 264px;
     }
@@ -1116,6 +1142,9 @@ img {
     }
    .footer{
     width: fit-content;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
    }
    .logo-container > .footer{
     display: flex;
@@ -1173,6 +1202,14 @@ img {
    .social-text{
     text-align: center;
    }
+   .modal-container{
+    width: fit-content;
+    max-width: 100%;
+   }
+   .section-five{
+    display: flex;
+    flex-direction: column;
+   }
 }
 
 
@@ -1181,7 +1218,8 @@ img {
     .header-container {
         height: fit-content;
         width: fit-content;
-        margin: 0 0 0 0;
+        display: flex;
+        justify-content: space-between;
     }
     .header-logo{
         padding-left: 16px;
@@ -1194,9 +1232,11 @@ img {
     }
     .contacts-container{
         flex-direction: row;
+        align-items: flex-end;
+        margin-right: 12px;
     }
     .flex {
-        gap: 40px;
+        gap: 12px;
         min-width: none;
         min-height: none;
         color: var(--brand-color-slate);
@@ -1204,14 +1244,21 @@ img {
         font-size: 16px;
         font-weight: 500px;
         letter-spacing: 0.32px;
-        display: block;
+        display: flex;
         font-size: 16px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
     }
     .container-two {
         margin: 0 auto;
         padding: 0;
         height: fit-content;
         width: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .hero-container {
@@ -1252,12 +1299,14 @@ img {
         justify-content: center;
         align-items: center;
         height: 1224px;
+        display: flex;
+        flex-direction: row;
+
+
     }
     .team-list {
         flex-wrap: wrap;
         gap: 24px;
-        margin: 0 0 0 0;
-        padding: 0 0 0 0;
     }
     img> .team.list{
         display: block;
@@ -1408,6 +1457,10 @@ img {
     .logo-container{
         display: flex;
     }
+    .flex{
+        display: flex;
+        font-size: 16px;
+    }
 }
 
 /*desktop and tablet styles*/
@@ -1427,11 +1480,11 @@ img {
         justify-content: center;
     }
     .hamburger-menu {
-        visibility: hidden;
+       display: none;
     }
-    .flex{
+
+    .header{
         display: flex;
-        font-size: 16px;
     }
 }
 

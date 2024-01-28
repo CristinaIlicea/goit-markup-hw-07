@@ -47,11 +47,7 @@
         <div class="hamburger-menu">
             <a class="hamburger-logo link header-logo logo" href="./index.html">Web<span class="half-logo" style="color:#2E2F42">Studio</span></a>
             <button 
-                class="hamburger-button menu-toggle js-open-menu" 
-                type="button"
-                aria-expanded="false"
-                aria-controls="mobile-menu"
-            >
+                class="hamburger-button" type="button" data-menu-open>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="22" viewBox="0 0 32 22" fill="none">
                     <g clip-path="url(#clip0_297053_2156)">
                     <path d="M1.34766 20.0431H30.8861M1.34766 10.7354H30.8861M1.34766 1.42773H30.8861" stroke="#2E2F42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -63,8 +59,8 @@
                     </defs>
                     </svg>
             </button>
-            <div class="menu-container mobile-menu js-menu-container" id="mobile-menu">
-                <button class="button-close-hamburger-menu js-close-menu menu-toggle close-icon button-modal" type="button">
+            <div class="menu-container mobile-menu is-hidden" data-menu>
+                <button class="button-close-hamburger-menu close-icon button-modal" type="button" data-menu-close>
                     <svg width="8" height="8" class="close-icon">
                         <use href="./images/icons.svg#icon-cross"></use>
                     </svg>
@@ -526,12 +522,6 @@
         </div>
      </div>
      <script src="./modal.js"></script>
-     <script
-     defer
-     src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-     crossorigin="anonymous"
-   ></script>
-   <script defer src="js/mobile-menu.js"></script>
+    <script defer src="./mobile-menu.js"></script>
 </body>
 </html>
