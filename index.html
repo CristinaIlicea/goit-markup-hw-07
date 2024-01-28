@@ -21,10 +21,6 @@
         <div class="header-container container">
             <nav class="navigation">
                 <a class="logo link header-logo" href="./index.html">Web<span class="half-logo" style="color:#2E2F42">Studio</span></a>
-                <div class="hamburger-menu">
-                    <label for="hamburger">&#9776;</label>
-                </div>
-
                 <ul class="main-navigation list">
                     <li>
                         <a class="link nav-link nav" href="./index.html">Studio</a>
@@ -47,7 +43,83 @@
                     </li>
                 </ul>
             </address>
-
+        </div>
+        <div class="hamburger-menu">
+            <a class="hamburger-logo link header-logo logo" href="./index.html">Web<span class="half-logo" style="color:#2E2F42">Studio</span></a>
+            <button 
+                class="hamburger-button menu-toggle js-open-menu" 
+                type="button"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="22" viewBox="0 0 32 22" fill="none">
+                    <g clip-path="url(#clip0_297053_2156)">
+                    <path d="M1.34766 20.0431H30.8861M1.34766 10.7354H30.8861M1.34766 1.42773H30.8861" stroke="#2E2F42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_297053_2156">
+                    <rect width="32" height="22" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+            </button>
+            <div class="menu-container mobile-menu js-menu-container" id="mobile-menu">
+                <button class="button-close-hamburger-menu js-close-menu menu-toggle close-icon button-modal" type="button">
+                    <svg width="8" height="8" class="close-icon">
+                        <use href="./images/icons.svg#icon-cross"></use>
+                    </svg>
+                </button>
+                <ul class="hamburger-navigation list">
+                    <li>
+                        <a class="link nav-link nav hamburger-link mobile-contact" href="./index.html">Studio</a>
+                    </li>
+                    <li>
+                        <a class="link nav-link nav hamburger-link mobile-contact" href="./portfolio.html">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="link nav-link nav hamburger-link mobile-contact" href="">Contacts</a>
+                    </li>
+                </ul>
+                <address class="hamburger-contacts">
+                    <ul class="list flex">
+                        <li>
+                            <a class="link contact mobile-contact" href="tel:+110001111111"> +11 (000) 111-11-11</a>
+                        </li>
+                        <li>
+                            <a class="link contact mobile-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                </ul> 
+                <ul class="trailing-icons list hamburger-menu-icons">
+                    <li class="ellipse">
+                        <a href="" class="social-media-link">
+                            <svg class="ellipse-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-Ellipse-ig"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="ellipse">
+                        <a href="" class="social-media-link">
+                            <svg class="ellipse-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-Ellipse-tw"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="ellipse">
+                        <a href="" class="social-media-link">
+                            <svg class="ellipse-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-Ellipse-fb"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="ellipse">
+                        <a href="" class="social-media-link">
+                            <svg class="ellipse-icon" width="16" height="16">
+                                <use href="./images/icons.svg#icon-Ellipse-in"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul> 
+            </div>
         </div>
     </header>
     <main>
@@ -454,5 +526,12 @@
         </div>
      </div>
      <script src="./modal.js"></script>
+     <script
+     defer
+     src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+     crossorigin="anonymous"
+   ></script>
+   <script defer src="js/mobile-menu.js"></script>
 </body>
 </html>
