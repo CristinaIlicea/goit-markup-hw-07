@@ -943,14 +943,12 @@ img {
 @media screen and (max-width: 767px) {
     .header{
         width: auto;
-        display: flex;
-        justify-content: space-between;
     }
     .hamburger-menu {
         visibility: visible;
         flex-shrink: 0;
         width: fit-content;
-        height: 70px;
+        height: 1px;
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -960,7 +958,6 @@ img {
         display: none;
     }
     .header-container{
-        display: none;
         height: 70px;
     }
     .mobile-menu{
@@ -979,7 +976,7 @@ img {
         font-size: 36px;
     }
     .contacts-container{
-        display: flex;
+        display: none;
         flex-direction: column;
     }
     .hamburger-link:hover, 
@@ -1006,6 +1003,7 @@ img {
         border: none;
         cursor: pointer;
         display: flex;
+        visibility: visible;
         justify-content: space-between;
         align-items: center;
         width: auto;
@@ -1039,10 +1037,7 @@ img {
         width: fit-content;
         max-width: 100%;
     }
-    .hamburger-logo{
-        display: flex;
-        justify-content: space-between;
-    }
+ 
     .nav-link{
         display: block;
         width: 100%;
@@ -1051,9 +1046,7 @@ img {
     .nav-link:hover, .nav-link:focus{
         color: var(--brand-color-ocean);
     }
-    body{
-        width: fit-content;
-    }
+    
     .hero-section{
         max-width: 100%;
         display: flex;
@@ -1082,9 +1075,7 @@ img {
         width: 32px;
         height: 22px;
     }
-    .header-container{
-        display: none;
-    }
+   
     .navigation{
         justify-content: flex-start;
     }
@@ -1092,7 +1083,7 @@ img {
         padding-left: 16px;
     }
     .section-two-container{
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 72px;
@@ -1221,6 +1212,10 @@ img {
    .section-five{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+   }
+   body{
+    width: fit-content;
    }
 }
 
@@ -1502,7 +1497,9 @@ img {
     .header{
         display: flex;
     }
-    
+    .hamburger-button{
+        display: none;
+    }
 }
 
 /*retina device only styles*/
