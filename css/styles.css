@@ -127,7 +127,6 @@ img {
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    margin-right: 76px;
 }
 .contacts-container {
     display: flex;
@@ -951,21 +950,21 @@ img {
         flex-shrink: 0;
         width: fit-content;
         height: 70px;
-        align-items: center;
-        display: block;
+        display: flex;
+        justify-content: space-between;
         position: relative;
-
+        max-width: 100%;
     }
     .main-navigation {
         display: none;
     }
     .header-container{
         display: none;
-        width: 428px;
         height: 70px;
     }
     .mobile-menu{
         width: fit-content;
+        max-width: 100%;
         height: fit-content;
         display: flex;
         flex-direction: column;
@@ -979,7 +978,7 @@ img {
         font-size: 36px;
     }
     .contacts-container{
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
     }
     .hamburger-link:hover, 
@@ -1006,10 +1005,9 @@ img {
         border: none;
         cursor: pointer;
         display: flex;
-        justify-content: flex-end;
         align-items: center;
         width: auto;
-        padding-left: 300px;
+        padding: 24px 16px 24px 16px;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .trailing-icons{
@@ -1033,8 +1031,13 @@ img {
         color: var(--brand-color-cornflower);
 
     }
+    .hamburger-nav{
+        display: flex;
+        justify-content: space-between;
+        width: fit-content;
+        max-width: 100%;
+    }
     .hamburger-logo{
-        padding-top: 25px;
         display: flex;
     }
     .nav-link{
@@ -1049,7 +1052,6 @@ img {
         width: fit-content;
     }
     .hero-section{
-        width: fit-content;
         max-width: 100%;
         display: flex;
     }
@@ -1094,6 +1096,7 @@ img {
         width: fit-content;
         margin: auto;
         padding: auto;
+        justify-content: center;
     }
     .section-box{
         width: 396px;
@@ -1141,7 +1144,6 @@ img {
         width: 88px;
     }
    .footer{
-    width: fit-content;
     display: flex;
     flex-direction: column;
     max-width: 100%;
@@ -1197,14 +1199,21 @@ img {
    }
 
    *, ::after, ::before{
-    box-sizing: content-box;
+    box-sizing: inherit;
    }
    .social-text{
     text-align: center;
    }
    .modal-container{
-    width: fit-content;
     max-width: 100%;
+   }
+   .modal-window{
+    max-width: 100%;
+    width: fit-content;
+    box-sizing: border-box;
+   }
+   .input-container{
+    box-sizing:border-box;
    }
    .section-five{
     display: flex;
@@ -1217,12 +1226,13 @@ img {
 @media screen and (min-width: 768px) and (max-width: 1158px) {
     .header-container {
         height: fit-content;
-        width: fit-content;
+        max-width: 100%;
         display: flex;
         justify-content: space-between;
     }
     .header-logo{
         padding-left: 16px;
+        margin-right: 76px;
     }
     .main-navigation {
         visibility: visible;
@@ -1284,7 +1294,7 @@ img {
         display: flex;
         flex-wrap: wrap;
         margin: 0 0 0 0;
-
+        justify-content: center;
     }
     .feature-icons {
         visibility: hidden;
@@ -1461,6 +1471,9 @@ img {
         display: flex;
         font-size: 16px;
     }
+    .header-logo{
+        margin-right: 76px;
+    }
 }
 
 /*desktop and tablet styles*/
@@ -1486,6 +1499,7 @@ img {
     .header{
         display: flex;
     }
+    
 }
 
 /*retina device only styles*/
