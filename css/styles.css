@@ -961,8 +961,6 @@ img {
         height: 70px;
     }
     .mobile-menu{
-        width: fit-content;
-        max-width: 100%;
         height: fit-content;
         display: flex;
         flex-direction: column;
