@@ -964,7 +964,11 @@ img {
         height: fit-content;
         display: flex;
         flex-direction: column;
-        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
         margin: 0 0 0 0;
         background-color: #fff;
         box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
@@ -1034,6 +1038,8 @@ img {
         justify-content: space-between;
         width: fit-content;
         max-width: 100%;
+        width: 100vw;
+        height: 100vh;
     }
  
     .nav-link{
